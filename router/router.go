@@ -28,8 +28,8 @@ func NewRouter(uc controller.IUserController, tc controller.ITaskController) *ec
 	}))
 
 	e.Use(middleware.CSRFWithConfig(middleware.CSRFConfig{
-		CookiePath: "/",
-		CookieDomain: os.Getenv("FE_URL"),
+		CookiePath:     "/",
+		CookieDomain:   os.Getenv("API_DOMAIN"),
 		CookieHTTPOnly: true,
 		CookieSameSite: http.SameSiteNoneMode, 
 		// CookieSameSite: http.SameSiteDefaultMode,

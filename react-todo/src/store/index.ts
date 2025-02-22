@@ -15,8 +15,8 @@ type State = {
 // 初期状態を定義
 const useStore = create<State>((set) => ({
     editedTask: { id: 0, title: '' },
-    updateEditedTask: (payload) => set({ editedTask: payload }),
+    updateEditedTask: (payload) => set({ editedTask: payload, }),
     resetEditedTask: () => set({ editedTask: { id: 0, title: '' } }),
-}));
+}))
 
-export default useStore;
+export default useStore
